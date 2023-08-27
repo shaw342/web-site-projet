@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{%block title %} Inscription {% endblock%}
+{% block content %}
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    div button{
+        width: 90px;
+    }
+    div input{
+        width: 200px;
+    }
+</style>
+<div>
+    <form method="POST" action="/signup">
+    <label for="nom"> votre nom</label>
+    <input type="text" id="nom" name="nom" value="{{ user['nom'] }}" required>
+    <label for="email">votre email</label>
+    <input type="text" id="email" name="email" value="{{ user['email'] }}" required>
+    <label for="password"> votre mot de passe</label>
+    <input type="text" id="password" name="password" value="{{ user['password'] }}"required>
+    <button type="submit" id="save">save</button>
+    </form>
+{% endblock %}
