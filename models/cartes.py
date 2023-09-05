@@ -3,7 +3,7 @@ from sanic.exceptions import SanicException
 from sanic.log import logger
 from sqlalchemy import Column, Integer, String, Float, DateTime,ForeignKey
 from sqlalchemy.orm import relationship
-from models.users import Base
+from models.users import User,Base
 
 class Carte(Base):
     __tablename__ = "carte"
